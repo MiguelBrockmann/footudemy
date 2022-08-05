@@ -1,4 +1,5 @@
 import classes from './MealItem.module.css'
+import MealItemForm from "./MealItemForm";
 
 const MealItems = props => {
     const price = `$${props.price.toFixed(2)}`; // rundet nach 2 nachkommatsrallen
@@ -9,7 +10,7 @@ const MealItems = props => {
              <div className={classes.price}>{price}</div>
          </div>
         <div>
-
+        <MealItemForm id={props.id}/>
         </div>
     </li>
 }
