@@ -20,7 +20,7 @@ const portalElement = document.getElementById('overlays'); //overlasys in index.
 const Modal = (props) => {
     return (
         <Fragment>
-            {ReactDOM.createPortal(<Backdrop  />, portalElement)} {/*reihenfolge egal wegen z index von modaloverlay ist grösser als der vom backdrop also overlay immer drüber*/}
+            {ReactDOM.createPortal(<Backdrop/>, portalElement)} {/*reihenfolge egal wegen z index von modaloverlay ist grösser als der vom backdrop also overlay immer drüber*/}
             {ReactDOM.createPortal(<ModalOverlay>{props.children}</ModalOverlay>, portalElement)} {/*//returnt mit children alles was in <modal>x</modal> x drinne ist*/}
         </Fragment>
     );

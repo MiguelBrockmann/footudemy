@@ -16,7 +16,7 @@ const Cart= props =>{
                 <span>35</span>
             </div>
             <div className={classes.actions}>
-            <button className={classes["button-alt"]}> close</button>
+            <button className={classes["button-alt"]} onClick={props.hideModal}> close</button>
             <button className={classes.button}>order</button>
             </div>
             </Modal>
