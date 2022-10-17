@@ -7,7 +7,7 @@ const defaultCartState = {
     items: [],
     totalAmount: 0,
 };
-
+//logik habe ich hier erstmal gesckippt wollte nur wissen wie provider usw funktioniert
 const cartReducer = (state, action) => {
     if (action.type === 'ADD') { // wenn add gedrückt
         const updatedTotalAmount =
@@ -79,7 +79,8 @@ const CartProvider = (props) => {
         addItem: addItemToCartHandler,
         removeItem: removeItemFromCartHandler,
     };
-    /*cartcontext kommt aus cart-context.js . provider sagt alles was hier drum gewrappt ist kann was in value steht benutzen mit usecontext in diesem fall alle weil es in appjs ist proviuder gibt auch das value weil hier die nötigen var stehen aber der context ist in cart-context.js*/
+    /*cartcontext kommt aus cart-context.js . provider sagt alles was hier drum gewrappt ist kann was in value steht benutzen
+    mit usecontext in diesem fall alle weil es in appjs ist proviuder gibt auch das value weil hier die nötigen var stehen aber der context ist in cart-context.js*/
     return (
         <CartContext.Provider value={cartContext}>
             {props.children}
