@@ -5,7 +5,7 @@ import CartContext from "../../../store/cart-context";
 
 const MealItems = props => {
     const cartCtx = useContext(CartContext);
-    const price = `$${props.price.toFixed(2)}`; // rundet nach 2 nachkommatsrallen
+    const price = `$${props.price.toFixed(2)}`; // rundet nach 2 nachkommatsrallen machen template literal für dollarzeichen
     const addToCartHandler = amount => {
         cartCtx.addItem({
             id: props.id,
